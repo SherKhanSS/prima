@@ -575,6 +575,81 @@
   }
 }
 
+.doctors {
+  position: relative;
+  background-image: url("../img/test-2000x900.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  z-index: -2;
+  color: #000000;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: -1;
+  }
+
+  .doctors__wrap {
+    .flex-mobile();
+  }
+
+  .doctors__list {
+    .list-reset();
+    .flex-mobile();
+    padding: 0 15px;
+  }
+
+  .doctors__title {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 1.7rem;
+    line-height: 1.2;
+    color: #ffffff;
+  }
+
+  .doctors__item {
+    background-color: #ffffff;
+    .flex-mobile();
+  }
+
+  .doctors__description {
+    .flex-mobile();
+    padding: 25px;
+  }
+
+  .doctors__name {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+
+  .doctors__profession,
+  .doctors__achievements {
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+
+  .doctors__link {
+    display: block;
+    background-color: #82786e;
+    width: 170px;
+  }
+
+  @media (min-width: @tablet-width) {
+    .doctors__title {
+      font-size: 2.5rem;
+    }
+  }
+
+  @media (min-width: @desktop-width) {}
+}
+
 .help {
 
   @media (min-width: @tablet-width) {}
