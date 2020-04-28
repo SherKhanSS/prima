@@ -25,7 +25,7 @@
   }
 
   .cutaway-wrap {
-    .flex-mobile();
+    @include flex-mobile;
     padding: 90px 15px 0 15px;
   }
 
@@ -59,7 +59,7 @@
   }
 
   .cutaway__wrap-button {
-    .flex-mobile();
+    @include flex-mobile();
   }
 
   .cutaway__button {
@@ -122,13 +122,13 @@
     padding-bottom: 20px;
   }
 
-  @media (max-width: @mobile-width-only) {
+  @media (max-width: $mobile-width-only) {
     .cutaway__seal {
       height: 70px;
     }
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: $tablet-width) {
 
     .cutaway-wrap {
       margin-top: 50px;
@@ -158,7 +158,7 @@
     }
   }
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: $desktop-width) {
     .cutaway-wrap {
       max-width: 1140px;
       margin: 0 auto;
@@ -212,12 +212,12 @@
   }
 
   .about-us__list {
-    .list-reset();
-    .flex-mobile();
+    @include list-reset;
+    @include flex-mobile;
   }
 
   .about-us__item {
-    .flex-mobile();
+    @include flex-mobile;
     background-color: #faf6ee;
     border-radius: 0.25rem;
     padding: 50px 50px 50px 50px;
@@ -239,7 +239,7 @@
     font-size: 16px;
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: $tablet-width) {
     .about-us__wrap {
       padding-right: 30px;
       padding-left: 30px;
@@ -257,7 +257,7 @@
     }
   }
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: $desktop-width) {
     .about-us__wrap {
       max-width: 1140px;
       margin: 0 auto;
@@ -286,7 +286,7 @@
   background-color: #ffffff;
 
   .help__wrap {
-    .flex-mobile();
+    @include flex-mobile;
     padding: 15px 15px 35px 15px;
   }
 
@@ -311,7 +311,7 @@
   }
 
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: $tablet-width) {
     .help__wrap {
       flex-direction: row;
       padding: 30px;
@@ -346,7 +346,7 @@
     }
   }
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: $desktop-width) {
     .help__wrap {
       max-width: 1140px;
       margin: 0 auto;
@@ -388,10 +388,10 @@
     z-index: -1;
   }
   .offers__wrap {
-    .flex-mobile();
+    @include flex-mobile;
   }
   .offers__description {
-    .flex-mobile();
+    @include flex-mobile;
     text-align: center;
     padding: 30px 15px 30px 15px;
   }
@@ -534,7 +534,7 @@
     transition: 0.4s;
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: $tablet-width) {
     .offers__description {
       padding: 30px;
     }
@@ -547,7 +547,7 @@
     }
   }
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: $desktop-width) {
     .offers__wrap {
       flex-direction: row;
       max-width: 1920px;
@@ -597,12 +597,12 @@
   }
 
   .doctors__wrap {
-    .flex-mobile();
+    @include flex-mobile;
   }
 
   .doctors__list {
-    .list-reset();
-    .flex-mobile();
+    @include list-reset;
+    @include flex-mobile;
     padding: 0 15px;
     max-width: 460px;
   }
@@ -616,12 +616,12 @@
 
   .doctors__item {
     background-color: #ffffff;
-    .flex-mobile();
+    @include flex-mobile;
     margin-bottom: 30px;
   }
 
   .doctors__description {
-    .flex-mobile();
+    @include flex-mobile;
     padding: 25px;
   }
 
@@ -661,7 +661,7 @@
     }
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: $tablet-width) {
     .doctors__list {
       flex-direction: row;
       flex-wrap: wrap;
@@ -679,7 +679,7 @@
     }
   }
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: $desktop-width) {
     .doctors__list {
       padding: 5px 0 20px 0;
       max-width: 1140px;
@@ -698,7 +698,7 @@
 }
 
 .doctors-link {
-  .flex-mobile();
+  @include flex-mobile;
   padding: 25px 0;
 
   a {
@@ -717,11 +717,11 @@
       transition: 0.4s;
     }
   }
-  @media (min-width: @tablet-width) {
+  @media (min-width: $tablet-width) {
     padding: 35px 0;
   }
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: $desktop-width) {
     padding: 50px;
   }
 }
@@ -738,7 +738,7 @@
   }
 
   .contacts__info {
-    .flex-mobile();
+    @include flex-mobile;
     padding: 15px 30px 30px;
   }
 
@@ -815,7 +815,7 @@
   }
 
   .contacts__list {
-    .list-reset();
+    @include list-reset;
     display: flex;
     justify-content: space-between;
     width: 160px;
@@ -901,7 +901,7 @@
     }
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: $tablet-width) {
     .contacts__wrap {
       flex-direction: row;
       text-align: left;
@@ -960,7 +960,7 @@
 
   }
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: $desktop-width) {
 
     .contacts__wrap {
       max-width: 1900px;
@@ -995,7 +995,7 @@
 
 .help {
 
-  @media (min-width: @tablet-width) {}
+  @media (min-width: $tablet-width) {}
 
-  @media (min-width: @desktop-width) {}
+  @media (min-width: $desktop-width) {}
 }

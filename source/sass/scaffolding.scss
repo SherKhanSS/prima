@@ -252,8 +252,8 @@ body {
   font-size: 14px;
   font-weight: 400;
   line-height: normal;
-  color: @text-black;
-  background-color: @fon-main;
+  color: $text-black;
+  background-color: $fon-main;
 }
 
 img {
@@ -280,17 +280,17 @@ img {
 
 
 .wrapper {
-  .flex-mobile;
+  @include flex-mobile;
   max-width: 1364px;
   margin: 0 auto;
   padding: 0 10px;
-  @media (min-width: @tablet-width) {
+  @media (min-width: $tablet-width) {
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
     padding: 0 20px;
   }
-  @media (min-width: @desktop-width) {
+  @media (min-width: $desktop-width) {
     padding: 0 70px;
   }
 }
@@ -304,7 +304,7 @@ img {
   text-transform: uppercase;
   display: inline-block;
   font-size: 14px;
-  color: @text-button;
+  color: $text-button;
   border-radius: 30px;
   background-image: linear-gradient(90deg, #d46f00 0, #ffba00);
   box-shadow: 0 10px 36px 4px rgba(70, 81, 86, .17);
@@ -324,7 +324,7 @@ img {
 }
 
 .link {
-  color: @link-color;
+  color: $link-color;
   text-decoration: none;
   border-bottom: 1px dashed rgba(0,173,164,.3);
 }
@@ -356,11 +356,11 @@ img {
   font-weight: 400;
   font-size: 26px;
   line-height: 32px;
-  @media (min-width: @tablet-width) {
+  @media (min-width: $tablet-width) {
     font-size: 30px;
     line-height: 36px;
   }
-  @media (min-width: @desktop-width) {
+  @media (min-width: $desktop-width) {
     font-size: 42px;
     line-height: 51px;
   }
@@ -372,7 +372,7 @@ img {
 }
 
 .doctor {
-	color: @text-gray-light;
+	color: $text-gray-light;
 }
 
 .phone {
@@ -382,7 +382,7 @@ img {
 }
 
 .list {
-	.list-reset;
+	@include list-reset;
 	margin: 40px 0;
 	padding: 0 0 0 20px;
 }
@@ -391,10 +391,10 @@ img {
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 28px;
-	color: @text-gray;
+	color: $text-gray;
 	position: relative;
 
-	@media (min-width: @tablet-width) {
+	@media (min-width: $tablet-width) {
 		font-size: 18px;
 		margin: 15px 0;
 	}

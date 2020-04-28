@@ -39,10 +39,10 @@
   transition: 0.4s;
 }
 
-@media (max-width: @mobile-width-only) {
+@media (max-width: $mobile-width-only) {
 }
 
-@media (max-width: @desktop-width-min) {
+@media (max-width: $desktop-width-min) {
 
   .page-header__wrapper {
     padding: 8px 10px 5px 10px;
@@ -80,7 +80,7 @@
   }
 }
 
-@media (min-width: @tablet-width) {
+@media (min-width: $tablet-width) {
   .page-header__logo {
     width: 119px;
     height: 65px;
@@ -121,7 +121,7 @@
 
 }
 
-@media (min-width: @desktop-width-min) {
+@media (min-width: $desktop-width-min) {
 
   .page-header__wrapper {
     display: flex;

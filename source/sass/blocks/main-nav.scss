@@ -7,7 +7,7 @@ position: relative;
 }
 
 .main-nav__list {
-  .list-reset();
+  @include list-reset;
 }
 
 .main-nav__toggle {
@@ -91,7 +91,7 @@ position: relative;
 
 // @media (max-width: @mobile-width-only) {}
 
-@media (min-width: @tablet-width) {
+@media (min-width: $tablet-width) {
 
   .main-nav__toggle {
     top: -58px;
@@ -123,7 +123,7 @@ position: relative;
 
 }
 
-@media (min-width: @desktop-width-min) {
+@media (min-width: $desktop-width-min) {
   .main-nav__toggle {
   display: none;
   }

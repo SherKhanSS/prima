@@ -3,22 +3,24 @@
 var gulp = require("gulp");
 var plumber = require("gulp-plumber");
 var sourcemap = require("gulp-sourcemaps");
-var less = require("gulp-less");
+var server = require("browser-sync").create();
+var sass = require("gulp-sass");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
-var server = require("browser-sync").create();
+var csso = require("gulp-csso");
 
 gulp.task("css", function () {
-  return gulp.src("source/less/style.less")
-    .pipe(plumber())
-    .pipe(sourcemap.init())
-    .pipe(less())
-    .pipe(postcss([
-      autoprefixer()
-    ]))
-    .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("source/css"))
-    .pipe(server.stream());
+  return gulp.src("source/sass/style.scss")
+  .pipe(plumber())
+  .pipe(sourcemap.init())
+  .pipe(sass())
+  .pipe(postcss([
+    autoprefixer()
+  ]))
+  .pipe(csso())
+  .pipe(sourcemap.write("."))
+  .pipe(gulp.dest("source/css"))
+  .pipe(server.stream());
 });
 
 gulp.task("server", function () {
@@ -30,7 +32,7 @@ gulp.task("server", function () {
     ui: false
   });
 
-  gulp.watch("source/less/**/*.less", gulp.series("css"));
+  gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
   gulp.watch("source/*.html").on("change", server.reload);
 });
 

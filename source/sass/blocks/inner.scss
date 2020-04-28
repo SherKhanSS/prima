@@ -24,7 +24,7 @@
 
   .description__wrap {
     color: #232323;
-    .flex-mobile();
+    @include flex-mobile;
     text-align: center;
     padding: 20px 15px 35px 15px;
   }
@@ -43,11 +43,11 @@
     line-height: 1.5;
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: $tablet-width) {
     .description__title {
       font-size: 2.5rem;
     }
   }
 
-  @media (min-width: @desktop-width) {}
+  @media (min-width: $desktop-width) {}
 }
